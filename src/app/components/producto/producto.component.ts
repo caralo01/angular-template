@@ -10,7 +10,7 @@ import { ProductosService } from '../../services/productos.service';
 export class ProductoComponent implements OnInit {
   public id:string;
   constructor(private _aroute: ActivatedRoute,
-              private _ps:ProductosService) { 
+              public _ps:ProductosService) { 
     this._aroute.params.subscribe(params =>{
         this.id = params['id'];
         this._ps.cargar_producto(this.id);
